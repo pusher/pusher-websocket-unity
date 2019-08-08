@@ -1,8 +1,12 @@
 ## Pusher Channels Unity Client Library
 
-The purpose of this repo is to be
--  A base Unity project which demonstrates how to integrate Pusher Channels with Unity to start
--  A build environment for `.unitypackage` and Asset Store release
+The purpose of this repo is to be:
+-  A Base Unity project which demonstrates how to integrate Pusher Channels with Unity
+-  A build environment for the `PusherWebsocketUnity` _unitypackage_ and its Asset Store release
+
+### Usage
+Download the latest `.unitypackage` compatible with you Unity version from the [releases section](/../../releases) or Download it from the Asset Store: [Pusher Channels Realtime Client](https://assetstore.unity.com/).
+
 
 ### Unity Versions Support
 TODO: table
@@ -32,10 +36,6 @@ TODO: table
 
 #### Unsupported Platforms:
 - WebGL due to incompatibility with Websockets (more [here](https://docs.unity3d.com/Manual/webgl-networking.html) under the _"No direct socket access"_ section)
-
-
-### Usage
-Download the latest `.unitypackage` compatible with you Unity version from the [release section](/releases) or Download it from the Asset Store: [Pusher Channels Realtime Client](https://assetstore.unity.com/).
 
 
 ### Build
