@@ -5,7 +5,7 @@
 ### Usage
 1) Download the latest `.unitypackage` from this repo's [Releases](/../../releases)
 2) Open a new/existing Unity project and make sure it is being opened by a [supported version of Unity](#unity-versions-support)
-3) [if you Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**
+3) [if your Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**
 4) Click on `Assets -> Import Package -> Custom Package...`, find and select the `PusherWebsocketUnity-x.x.x-xxxxxxx.unitypackage` and click *Import* on the `Import Unity Package` window.
 5) Create a Pusher Channels app at https://pusher.com/channels.
 6) Open the `PusherMover.cs` file in the Assets folder and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained at the previous step.
@@ -48,14 +48,15 @@ Thus far we tested this, and can confirm that works, on:
 #### Unsupported Platforms:
 - WebGL: due to incompatibility with Websockets (more [here](https://docs.unity3d.com/Manual/webgl-networking.html) under the _"No direct socket access"_ section)
 
+<!--
 ### Update the Package
 TODO
 
 ### Build
 TODO
+-->
 
 ### Known Issues
-
 This library is INCOMPATIBLE with 2018.1.4 <= Unity <= 2018.2.4 due to
 a [bug](https://issuetracker.unity3d.com/issues/opened-event-of-a-websocket4net-dot-websocket-does-not-get-called-when-opening-a-web-socket)
 in the Unity engine that prevents WebSocket4Net (one of the dependencies) to work correctly
