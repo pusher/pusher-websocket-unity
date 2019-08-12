@@ -61,3 +61,6 @@ This library is INCOMPATIBLE with 2018.1.4 <= Unity <= 2018.2.4 due to
 a [bug](https://issuetracker.unity3d.com/issues/opened-event-of-a-websocket4net-dot-websocket-does-not-get-called-when-opening-a-web-socket)
 in the Unity engine that prevents WebSocket4Net (one of the dependencies) to work correctly
 
+### Credits
+- Unity Technologies https://unity3d.com/company - for the Unity3d environment
+- Patrick McCarthy (GlitchEnzo) https://github.com/GlitchEnzo - for [NuGetForUnity](https://github.com/GlitchEnzo/NuGetForUnity)
