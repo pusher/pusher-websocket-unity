@@ -2,6 +2,8 @@
 
 **WARNING this is an experimental release and might not work or change in the future**
 
+This library packages [the official WebSocket .NET SDK for Pusher Channels](https://github.com/pusher/pusher-websocket-dotnet) as a `.unitypackage` to make it easier to use in [Unity](https://unity.com/) projects. For API documentation, see [the pusher-websocket-dotnet README](https://github.com/pusher/pusher-websocket-dotnet).
+
 ### Usage
 1) Download the latest `.unitypackage` from this repo's [Releases](/../../releases)
 2) Open a new/existing Unity project and make sure it is being opened by a [supported version of Unity](#unity-versions-support)
