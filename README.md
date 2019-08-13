@@ -8,8 +8,8 @@
 3) [if your Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**
 4) Click on `Assets -> Import Package -> Custom Package...`, find and select the `PusherWebsocketUnity-x.x.x-xxxxxxx.unitypackage` and click *Import* on the `Import Unity Package` window.
 5) Create a Pusher Channels app at https://pusher.com/channels.
-6) Open the `PusherMover.cs` file in the Assets folder and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained at the previous step.
-7) Create a new GameObject, by going on `GameObject -> Create Empty`. Drag the `PusherMover.cs` script onto the GameObject Inspector to set it as a script for the object.
+6) Open the `PusherManager.cs` file in the Assets folder and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained at the previous step.
+7) Create a new GameObject, by going on `GameObject -> Create Empty`. Drag the `PusherManager.cs` script onto the GameObject Inspector to set it as a script for the object.
 8) Save and click Play to start the game in Unity.
 9) Verify that in the Console tab the following is logged: `Connection state changed`, `Connected`, `Subscribed`.
 10) You can now customise the channel name (by default is `"my-channel"`) and events to bind to (by default is `"my-event"`) in the `PusherManager.cs` script.
