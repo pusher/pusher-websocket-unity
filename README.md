@@ -1,6 +1,4 @@
-## !EXPERIMENTAL! Pusher Channels Unity Client Library
-
-**WARNING this is an experimental release and might not work or change in the future**
+## Pusher Channels Unity Client Library
 
 This library packages [the official WebSocket .NET SDK for Pusher Channels](https://github.com/pusher/pusher-websocket-dotnet) as a `.unitypackage` to make it easier to use in [Unity](https://unity.com/) projects. For API documentation, see [the pusher-websocket-dotnet README](https://github.com/pusher/pusher-websocket-dotnet).
 
