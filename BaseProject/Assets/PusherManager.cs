@@ -9,8 +9,8 @@ public class PusherManager : MonoBehaviour
     public static PusherManager instance = null;
     private Pusher _pusher;
     private Channel _channel;
-    private const string APP_KEY = "APP_KEY";
-    private const string APP_CLUSTER = "APP_CLUSTER";
+    private const string APP_KEY = "2fa570d16fa7a40dea9f";
+    private const string APP_CLUSTER = "eu";
 
     async Task Start()
     {
