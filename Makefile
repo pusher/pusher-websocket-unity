@@ -1,6 +1,6 @@
 build-release:
 	git subtree split --prefix=BaseProject/Assets/PusherWebsocketUnity --branch upm
-	git tag $(VERSION) upm -f
+	git tag $(VERSION) upm
 
 push-release:
-	git push origin upm --tags -f
+	git push origin upm --tags
