@@ -60,7 +60,7 @@ Your `Packages/manifest.json` should now look like this:
 3) Now Unity should auto resolve dependencies and fetch the newly defined package.
 
 #### 3. Add PusherManager and run the game
-1) Copy the sample [`PusherManager.cs`](BaseProject/Assets) into **your project's Assets folder** and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained when you crated the Pusher Channels app in the dashboard.
+1) Copy the sample [`PusherManager.cs`](BaseProject/Assets/PusherManager.cs) into **your project's Assets folder** and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained when you crated the Pusher Channels app in the dashboard.
 2) Create a new GameObject, by going on `GameObject -> Create Empty`. Drag the `PusherManager.cs` script onto the GameObject Inspector to set it as a script for the object.
 3) Save and click Play to start the game in Unity.
 4) Verify that in the Console tab the following is logged: `Connection state changed`, `Connected`, `Subscribed`.
