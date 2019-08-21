@@ -31,19 +31,19 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 3. [Add PusherManager and run the game](#3.-add-pushermanager)
 
 #### 1. Create a Pusher Channels app
-1.1) Create a Pusher Channels app at https://pusher.com/channels
+1.1. Create a Pusher Channels app at https://pusher.com/channels
 
 #### 2. Install
 #### 2.1. Install it via unitypackage
-2.1.1) Download the latest `.unitypackage` from this repo's [Releases](/../../releases)
-2.1.2) Open a new/existing Unity project and make sure it is being opened by a [supported version of Unity](#unity-versions-support)
-2.1.3) [if your Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**.
-2.1.4) Click on `Assets -> Import Package -> Custom Package...`, find and select the `PusherWebsocketUnity-x.x.x+xxxxxxx.unitypackage` and click *Import* on the `Import Unity Package` window.
+2.1.1. Download the latest `.unitypackage` from this repo's [Releases](/../../releases)
+2.1.2. Open a new/existing Unity project and make sure it is being opened by a [supported version of Unity](#unity-versions-support)
+2.1.3. [if your Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**.
+2.1.4. Click on `Assets -> Import Package -> Custom Package...`, find and select the `PusherWebsocketUnity-x.x.x+xxxxxxx.unitypackage` and click *Import* on the `Import Unity Package` window.
 
 #### 2.2. Install it via Unity Package Manager (UPM)
 **WARNING** this method works only if your version of Unity is **2018.3.x or greater**, if you don't satisfy that, use the [unitypackage](#install-it-via-unitypackage) method.
-2.2.1) [if your Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**.
-2.2.2) Open the `Packages/manifest.json` with your favourite editor and add the following under your dependencies (make sure to respect JSON commas):
+2.2.1. [if your Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**.
+2.2.2. Open the `Packages/manifest.json` with your favourite editor and add the following under your dependencies (make sure to respect JSON commas):
 ```json
 "com.pusher.pusherwebsocketunity": "https://github.com/pusher/pusher-websocket-unity.git#1.0.2+190808"
 ```
@@ -57,14 +57,14 @@ Your `Packages/manifest.json` should now look like this:
  }
 }
 ```
-2.2.3) Now Unity should auto resolve dependencies and fetch the newly defined package.
+2.2.3. Now Unity should auto resolve dependencies and fetch the newly defined package.
 
 #### 3. Add PusherManager and run the game
-3.1) Copy the sample [`PusherManager.cs`](BaseProject/Assets/PusherManager.cs) into **your project's Assets folder** and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained when you crated the Pusher Channels app in the dashboard.
-3.2) Create a new GameObject, by going on `GameObject -> Create Empty`. Drag the `PusherManager.cs` script onto the GameObject Inspector to set it as a script for the object.
-3.3) Save and click Play to start the game in Unity.
-3.4) Verify that in the Console tab the following is logged: `Connection state changed`, `Connected`, `Subscribed`.
-3.5) You can now customise the channel name (by default is `"my-channel"`) and events to bind to (by default is `"my-event"`) in the `PusherManager.cs` script.
+3.1. Copy the sample [`PusherManager.cs`](BaseProject/Assets/PusherManager.cs) into **your project's Assets folder** and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained when you crated the Pusher Channels app in the dashboard.
+3.2. Create a new GameObject, by going on `GameObject -> Create Empty`. Drag the `PusherManager.cs` script onto the GameObject Inspector to set it as a script for the object.
+3.3. Save and click Play to start the game in Unity.
+3.4. Verify that in the Console tab the following is logged: `Connection state changed`, `Connected`, `Subscribed`.
+3.5. You can now customise the channel name (by default is `"my-channel"`) and events to bind to (by default is `"my-event"`) in the `PusherManager.cs` script.
 
 ### Update this package
 #### Update the version of .unitypackage
