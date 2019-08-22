@@ -55,7 +55,7 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 ### 3 Add PusherManager and run the game
 3.1 - Copy the sample [`PusherManager.cs`](BaseProject/Assets/PusherManager.cs) into your project's Assets folder and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained when you created the Pusher Channels app in the dashboard.<br>
 3.2 - Create a new GameObject, by going on `GameObject -> Create Empty`. Drag the `PusherManager.cs` script onto the GameObject Inspector to set it as a script for the object.<br>
-3.3 - Save and click Play to start the game in Unity.<br>
+3.3 - Save and click *Play* to start the game in Unity.<br>
 3.4 - Verify that in the Console tab the following is logged: `Connection state changed`, `Connected`, `Subscribed`.<br>
 3.5 - You can now customize the channel name (by default is `"my-channel"`) and events to bind to (by default is `"my-event"`) in the `PusherManager.cs` script.
 
