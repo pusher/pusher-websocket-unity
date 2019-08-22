@@ -64,7 +64,7 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 To update the version of the `.unitypackage` you can delete the `Assets/PusherWebsocketUnity` directory and repeat the [install steps](#2-install).
 
 ### Update the version of Unity Package Manager (UPM) package
-To update the version of `com.pusher.pusherwebsocketunity` you just need to check the available versions in [Releases](/../../releases) and change the package version in the `Packages/manifest.json`, like so:
+To update the version of `com.pusher.pusherwebsocketunity` you just need to check the available versions in [releases](/../../releases) and change the package version in the `Packages/manifest.json`, like so:
 
 From:
 ```json
