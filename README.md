@@ -41,7 +41,7 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 #### 2.2 Install it via Unity Package Manager (UPM)
 **WARNING** this method works only if your version of Unity is **2018.3.x or greater**, if you don't satisfy that, use the [unitypackage](#2-install) method.<br>
 2.2.1 - [if your Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**.<br>
-2.2.2 - Open the `Packages/manifest.json` with your favourite editor and add the following in your `dependencies` (make sure to respect JSON commas):
+2.2.2 - Open `Packages/manifest.json` with your favourite editor and add the following in your `dependencies` (make sure to respect JSON commas):
 ```
 {
  "dependencies": {
