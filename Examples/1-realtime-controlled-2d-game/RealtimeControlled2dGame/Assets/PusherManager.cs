@@ -47,7 +47,8 @@ public class PusherManager : MonoBehaviour
         {
             _pusher = new Pusher(APP_KEY, new PusherOptions()
             {
-                Cluster = APP_CLUSTER
+                Cluster = APP_CLUSTER,
+                Encrypted = true
             });
 
             _pusher.Error += OnPusherOnError;
