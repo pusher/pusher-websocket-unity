@@ -14,10 +14,10 @@ async function loop(){
       case 1:
         idle();
         break;
-      case 2:
+      case 3:
         runLeft();
         break;
-      case 3:
+      case 2:
         runRight();
         break;
       case 4:
@@ -34,6 +34,22 @@ async function loop(){
     await until(() => (new Date) > target)
   }
 }
+
+document.addEventListener("keydown", ev => {
+
+  switch(ev.key){
+    case "ArrowLeft": 
+      updateAction(3);
+      break;
+    case "ArrowRight":
+      updateAction(2)
+      break;
+    case "b":
+      updateAction(4)
+      break;
+  }
+  console.log(ev.key)
+})
 
 function httpGet(theUrl, action ) {
       var xmlHttp = new XMLHttpRequest();
@@ -59,6 +75,7 @@ function idle(){
 }
 
 function updateAction(num){
+  console.log("Update Action!")
   currAction = num
 }
 
