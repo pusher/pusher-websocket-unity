@@ -25,9 +25,10 @@ An example 2d game to show how Pusher Channels can be integrated with Unity
 - 7 - From inside the GameController directory start the controller app with the command: `node`
 - 8 - In your Unity 2018.1.0 go to Project, click on Open and select the `RealtimeControlled2dGame` folder
 - 9 - In Unity open the `PusherManager.cs` file under the `Assets` folder and replace `APP_KEY` and `APP_CLUSTER` as you did above
-- 10 - Click Play to start the game in Unity
-- 11 - Go to http://localhost:5000 and click the **left/right arrow keys** or the **B button** to attack
-- 12 - You should now be able to see the character moving in the Unity Game tab :tada:
+- 10 - In Unity in the the `Assets` folder open the `Scenes` folder and double click on the scene named `Level0`. A scene with a knight should show.
+- 11 - Click Play to start the game in Unity
+- 12 - Go to http://localhost:5000 and click the **left/right arrow keys** or the **B button** to attack
+- 13 - You should now be able to see the character moving in the Unity Game tab :tada:
 
 ### Credits
 - Swordman Asset: [Black Hammer](https://assetstore.unity.com/publishers/32893) https://assetstore.unity.com/packages/2d/characters/2d-simple-character-swordman-133259
