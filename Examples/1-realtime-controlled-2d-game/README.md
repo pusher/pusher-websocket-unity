@@ -22,7 +22,7 @@ An example 2d game to show how Pusher Channels can be integrated with Unity
 - 4 - Move to the cloned directory `cd pusher-channels-unity-examples`
 - 5 - Move into the GameController dir `cd GameController/` and run `npm install`
 - 6 - Edit the `index.js` file under `GameController/` by replacing  `APP_ID`, `APP_KEY`, `APP_SECRET` and `APP_CLUSTER` with the ones that you can find in the  Pusher Channels dashboard's *Getting Started* tab of the newly created app.
-- 7 - From inside the GameController directory start the controller app with the command: `node`
+- 7 - From inside the GameController directory start the controller app with the command: `npm start`
 - 8 - In your Unity 2018.1.0 go to Project, click on Open and select the `RealtimeControlled2dGame` folder
 - 9 - In Unity open the `PusherManager.cs` file under the `Assets` folder and replace `APP_KEY` and `APP_CLUSTER` as you did above
 - 10 - In Unity in the the `Assets` folder open the `Scenes` folder and double click on the scene named `Level0`. A scene with a knight should show.
@@ -32,7 +32,7 @@ An example 2d game to show how Pusher Channels can be integrated with Unity
 
 ### Credits
 - Swordman Asset: [Black Hammer](https://assetstore.unity.com/publishers/32893) https://assetstore.unity.com/packages/2d/characters/2d-simple-character-swordman-133259
-- Nes Game Controller: [injectilo](https://codepen.io/injectilo) https://codepen.io/injectilo/pen/MYJrmm
+- Game Controller: [alvaromontoro](https://codepen.io/alvaromontoro) https://codepen.io/alvaromontoro/pen/bGbpmvR
 - Retro Game Sound: Audio Preview from https://audiojungle.net/item/retro-game/21465199 
 - Swoosh Game Sound: Sound Effect from http://soundbible.com/706-Swoosh-3.html
 - Background: From https://swapnilrane24.itch.io/green-background?download
