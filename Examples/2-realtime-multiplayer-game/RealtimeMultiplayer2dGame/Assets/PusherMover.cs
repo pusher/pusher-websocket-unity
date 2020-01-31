@@ -1,29 +1,45 @@
 ﻿using System.Text;
 using UnityEngine;
-using UnityEditorInternal;
+
+
 
 public class PusherMover : MonoBehaviour
 {
+    private enum State
+    {
+        RUNLEFT,
+        RUNRIGHT,
+        IDLE,
+        ATTACK
+    }
+
+    private GameObject background;
     private PusherManager _pusherManager;
+ 
     static Animator anim;
     private Vector2 targetPos;
+
+
     public float stepSize = 0.1f;
     public int direction = -1;
     AudioSource audioData;
     State currentState = State.IDLE;
     State prevState;
 
+
     void Start()
     {
         anim = GetComponent<Animator>();
         if (_pusherManager == null)
         {
-            _pusherManager = GetComponent<PusherManager>();
+            background = GameObject.Find("flat_nature_art");
+            _pusherManager = background.GetComponent<PusherManager>();
         }
 
         transform.localScale = new Vector3(-1, 1, 1);
         audioData = GetComponent<AudioSource>();
         prevState = currentState;
+
     }
 
     // Update is called once per frame
@@ -82,13 +98,13 @@ public class PusherMover : MonoBehaviour
         anim.SetBool("IsIdle", false);
     }
 
-    void run(int direction)
+    void run(int dir)
     {
         anim.SetBool("IsRunning", true);
         anim.SetBool("IsAttacking", false);
         anim.SetBool("IsIdle", false);
-        targetPos = new Vector2(transform.position.x + stepSize * direction, transform.position.y);
-        transform.localScale = new Vector3(-direction, 1, 1);
+        targetPos = new Vector2(transform.position.x + stepSize * dir, transform.position.y);
+        transform.localScale = new Vector3(-dir, 1, 1);
         transform.position = targetPos;
     }
 
@@ -101,7 +117,7 @@ public class PusherMover : MonoBehaviour
 
     void sync(State s)
     {
-        if (s != prevState)
+        if (currentState != prevState)
         {
             _pusherManager.ClientEvent("client-position", ConvertPosToString(targetPos));
         }
