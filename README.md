@@ -33,10 +33,10 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 
 ### 2 Install
 #### 2.1 Install it via unitypackage
-2.1.1 - Download the latest `PusherWebsocketUnity-1.1.1+191127.unitypackage` from [releases](/../../releases)<br>
+2.1.1 - Download the latest `PusherWebsocketUnity-1.1.2+200211.unitypackage` from [releases](/../../releases)<br>
 2.1.2 - Open a new/existing Unity project and make sure it is being opened by a [supported version of Unity](#unity-versions-support)<br>
 2.1.3 - [if your Unity version is **2018.x.x**] Make sure that under `Edit -> Project Settings -> Player` the `Configuration -> Scripting Runtime Version` is set to **.NET 4.x Equivalent**.<br>
-2.1.4 - Click on `Assets -> Import Package -> Custom Package...`, find and select the `PusherWebsocketUnity-1.1.1+191127.unitypackage` and click *Import* on the `Import Unity Package` window.<br>
+2.1.4 - Click on `Assets -> Import Package -> Custom Package...`, find and select the `PusherWebsocketUnity-1.1.2+200211.unitypackage` and click *Import* on the `Import Unity Package` window.<br>
 
 #### 2.2 Install it via Unity Package Manager (UPM)
 **WARNING** this method works only if your version of Unity is **2018.3.x or greater**, if you don't satisfy that, use the [unitypackage](#2-install) method.<br>
@@ -46,7 +46,7 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 {
  "dependencies": {
   ...
-  "com.pusher.pusherwebsocketunity": "https://github.com/pusher/pusher-websocket-unity.git#1.1.1+191127"
+  "com.pusher.pusherwebsocketunity": "https://github.com/pusher/pusher-websocket-unity.git#1.1.2+200211"
  }
 }
 ```
@@ -72,7 +72,7 @@ From:
 ```
 To:
 ```json
-"com.pusher.pusherwebsocketunity": "https://github.com/pusher/pusher-websocket-unity.git#1.1.1+191127"
+"com.pusher.pusherwebsocketunity": "https://github.com/pusher/pusher-websocket-unity.git#1.1.2+200211"
 ```
 
 ## Unity Platforms Support
