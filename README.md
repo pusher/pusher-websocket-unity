@@ -26,7 +26,8 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 ## Getting Started
 1. [Create a Pusher Channels app](#1-create-a-pusher-channels-app)
 2. [Install](#2-install) the **Pusher Channels Unity Client Library** via `unitypackage` or via Unity Package Manager (UPM)
-3. [Add PusherManager and run the game](#3-add-pushermanager-and-run-the-game)
+3. [IL2CPP Extra Steps (Ignore if using Mono)](#3-il2cpp-extra-steps)
+4. [Add PusherManager and run the game](#4-add-pushermanager-and-run-the-game)
 
 ### 1 Create a Pusher Channels app
 1.1 - Create a Pusher Channels app at https://pusher.com/channels
@@ -52,12 +53,23 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 ```
 2.2.3 - Now Unity should auto resolve dependencies and fetch the newly defined package.
 
-### 3 Add PusherManager and run the game
-3.1 - Copy the sample [`PusherManager.cs`](BaseProject/Assets/PusherManager.cs) into your project's Assets folder and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained when you created the Pusher Channels app in the dashboard.<br>
-3.2 - Create a new GameObject, by going on `GameObject -> Create Empty`. Drag the `PusherManager.cs` script onto the GameObject Inspector to set it as a script for the object.<br>
-3.3 - Save and click *Play* to start the game in Unity.<br>
-3.4 - Verify that `Connection state changed`, `Connected`, `Subscribed` is logged in the *Console* tab.<br>
-3.5 - You can now customize the channel name (by default is `"my-channel"`) and events to bind to (by default is `"my-event"`) in the `PusherManager.cs` script.
+### 3 IL2CPP Extra Steps
+**NOTE:** You can ignore the following steps if using Mono
+
+3.1 - Add the following to the `link.xml` file located at `/Assets`. If the file doesn’t exist, then create it.
+```
+<linker>
+    <assembly fullname="PusherClient" preserve="all"/>
+</linker>
+```
+3.2 - Don't use any methods in the PusherClient namespace that contain dynamic types. Using these methods will result in a runtime crash as IL2CPP doesn’t support dynamic types due to it's AOT compiler. An example of this is the `Channel.Bind(string, Action<dynamic>)` method, instead use the overload methods.
+
+### 4 Add PusherManager and run the game
+4.1 - Copy the sample [`PusherManager.cs`](BaseProject/Assets/PusherManager.cs) into your project's Assets folder and add your keys as values for `private const string APP_KEY` and `private const string APP_CLUSTER` obtained when you created the Pusher Channels app in the dashboard.<br>
+4.2 - Create a new GameObject, by going on `GameObject -> Create Empty`. Drag the `PusherManager.cs` script onto the GameObject Inspector to set it as a script for the object.<br>
+4.3 - Save and click *Play* to start the game in Unity.<br>
+4.4 - Verify that `Connection state changed`, `Connected`, `Subscribed` is logged in the *Console* tab.<br>
+4.5 - You can now customize the channel name (by default is `"my-channel"`) and events to bind to (by default is `"my-event"`) in the `PusherManager.cs` script.
 
 ## Update this package
 ### Update the version of .unitypackage
