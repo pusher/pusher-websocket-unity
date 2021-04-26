@@ -43,7 +43,7 @@ public class PusherManager : MonoBehaviour
             _pusher.ConnectionStateChanged += PusherOnConnectionStateChanged;
             _pusher.Connected += PusherOnConnected;
             _channel = await _pusher.SubscribeAsync("my-channel");
-            _channel.Subscribed += OnChannelOnSubscribed;
+            _pusher.Subscribed += OnChannelOnSubscribed;
             await _pusher.ConnectAsync();
         }
         else
@@ -71,7 +71,7 @@ public class PusherManager : MonoBehaviour
         Debug.Log("Errored");
     }
 
-    private void OnChannelOnSubscribed(object s)
+    private void OnChannelOnSubscribed(object s, Channel channel)
     {
         Debug.Log("Subscribed");
     }
