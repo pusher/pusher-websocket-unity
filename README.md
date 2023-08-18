@@ -8,20 +8,8 @@ This library packages [the official WebSocket .NET SDK for Pusher Channels](http
 -  `Examples` example projects that combines Unity and Pusher Channels
 
 ## Unity Versions Support
-- Unity 2018.1
-  - Unity 2018.1.0
-  - Unity 2018.1.2
-  - Unity 2018.1.3
 
-- All Unity 2018.2.x >= 2018.2.5f1
-
-- All Unity 2018.3.x
-
-- All Unity 2018.4.x
-
-- All Unity 2019.1.x
-
-- All Unity 2019.2.x
+- Unity 2019, 2020, 2021 and 2022
 
 ## Getting Started
 1. [Create a Pusher Channels app](#1-create-a-pusher-channels-app)
@@ -107,11 +95,6 @@ TODO
 ### Build
 TODO
 -->
-
-## Known Issues
-This library is INCOMPATIBLE with 2018.1.4 <= Unity <= 2018.2.4 due to
-a [bug](https://issuetracker.unity3d.com/issues/opened-event-of-a-websocket4net-dot-websocket-does-not-get-called-when-opening-a-web-socket)
-in the Unity engine that prevents WebSocket4Net (one of the dependencies) to work correctly.
 
 ## Credits
 - Unity Technologies https://unity3d.com/company - for the Unity3d environment
