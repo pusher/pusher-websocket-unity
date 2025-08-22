@@ -5,9 +5,9 @@ using UnityEngine;
 
 public enum State
 {
-    RUNLEFT,
-    RUNRIGHT,
     IDLE,
+    RUNRIGHT,
+    RUNLEFT,
     ATTACK
 }
 
@@ -17,9 +17,9 @@ public class PusherManager : MonoBehaviour
     public static PusherManager instance = null;
     private Pusher _pusher;
     private Channel _channel;
+    private State _currentState = State.IDLE;
     private const string APP_KEY = "APP_KEY";
     private const string APP_CLUSTER = "APP_CLUSTER";
-    private State _state = State.IDLE;
 
     async Task Start()
     {
@@ -63,26 +63,38 @@ public class PusherManager : MonoBehaviour
 
     private void PusherOnConnected(object sender)
     {
-        _channel.Bind("run-left", (dynamic data) =>
+        Debug.Log("Connected");
+
+        // Bind to game control events
+        _channel.Bind("move_right", (dynamic data) =>
         {
-            _state = State.RUNLEFT;
+            Debug.Log("move_right received");
+            SetCurrentState(State.RUNRIGHT);
         });
 
-        _channel.Bind("run-right", (dynamic data) =>
+        _channel.Bind("move_left", (dynamic data) =>
         {
-            _state = State.RUNRIGHT;
-        });
-
-        _channel.Bind("idle", (dynamic data) =>
-        {
-            _state = State.IDLE;
+            Debug.Log("move_left received");
+            SetCurrentState(State.RUNLEFT);
         });
 
         _channel.Bind("attack", (dynamic data) =>
         {
-            _state = State.ATTACK;
+            Debug.Log("attack received");
+            SetCurrentState(State.ATTACK);
         });
-        Debug.Log("Connected");
+
+        _channel.Bind("idle", (dynamic data) =>
+        {
+            Debug.Log("idle received");
+            SetCurrentState(State.IDLE);
+        });
+
+        // Keep the original event binding for compatibility
+        _channel.Bind("my-event", (dynamic data) =>
+        {
+            Debug.Log("my-event received");
+        });
     }
 
     private void PusherOnConnectionStateChanged(object sender, ConnectionState state)
@@ -100,21 +112,21 @@ public class PusherManager : MonoBehaviour
         Debug.Log("Subscribed");
     }
 
-    public void Message(string message)
-    {
-        _channel?.Trigger("time has occured", message);
-    }
-
-    public State CurrentState()
-    {
-        return _state;
-    }
-
     async Task OnApplicationQuit()
     {
         if (_pusher != null)
         {
             await _pusher.DisconnectAsync();
         }
+    }
+
+    public State CurrentState()
+    {
+        return _currentState;
+    }
+
+    public void SetCurrentState(State newState)
+    {
+        _currentState = newState;
     }
 }
