@@ -45,5 +45,3 @@ app.get('/game/character/idle', function(req, res) {
 var port = process.env.PORT || 5000;
 console.log('GameController - listening')
 app.listen(port);
-
-
