@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "pusher": "^2.2.2"
+    "express": "^4.22.1",
+    "pusher": "^5.3.2"
   },
   "devDependencies": {},
   "scripts": {
